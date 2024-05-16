@@ -1,0 +1,161 @@
+/* Variables */
+:root {
+  --color-first: #212529;
+  --color-second: #ce1212;
+  --font-first: "Amatic SC", sans-serif;
+  --font-second: "Inter", sans-serif;
+  --bg-color-first: #eeeeee;
+  --bg-color-second: #fff;
+}
+
+@media (min-width: 565px) {
+  nav .container {
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+  }
+  .container {
+    max-width: 720px;
+  }
+  nav .logo {
+    padding: 25px 0px;
+  }
+}
+
+@media (min-width: 993px) {
+  nav .icons :nth-child(2) {
+    display: none;
+  }
+  nav .nav-menu {
+    display: block;
+  }
+  nav .nav-menu ul {
+    display: flex;
+  }
+  nav .nav-menu ul li {
+    padding: 5px 15px;
+    color: #7f7f90;
+    font-weight: 600;
+  }
+  nav .nav-menu a {
+    position: relative;
+    transition: all 0.5s;
+    font-size: 17px;
+    line-height: 0;
+    font-weight: 600;
+    font-style: normal;
+  }
+  nav .nav-menu #home {
+    color: #212529;
+  }
+  nav .nav-menu #home::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-second);
+    left: 0;
+    bottom: -8px;
+  }
+  nav .nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-second);
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s;
+  }
+  nav .nav-menu a:hover::after {
+    width: 100%;
+  }
+  nav .nav-menu a:hover {
+    color: black;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1320px;
+  }
+  nav .container {
+    max-width: 1320px;
+    margin-inline: auto;
+  }
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .container {
+    max-width: 1320px;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .container .hero-img {
+    width: 40%;
+  }
+  header .container img {
+    width: 100%;
+  }
+  header .container .content {
+    width: 40%;
+    display: inline;
+    text-align: start;
+  }
+  header .container .content p {
+    margin-block: 25px;
+  }
+  header .container .content .btns {
+    justify-content: start;
+    gap: 40px;
+  }
+
+  /* Chefs-Section */
+  #chefs .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #chefs .cards .card {
+    width: calc(100% / 3 - 50px);
+  }
+
+  /* Gallery Section */
+  #gallery .gallery-images {
+    flex-direction: row;
+  }
+
+  #gallery .meal {
+    width: calc((100% / 3) - 20px);
+  }
+  /* <!-- Contact Section --> */
+  #contact .container {
+    width: 100%;
+  }
+  #contact .info {
+    flex-direction: row;
+  }
+  #contact .info > * {
+    width: calc((100% / 2) - 20px);
+  }
+  #contact form .input-group > * {
+    width: calc((100% / 2) - 8px);
+  }
+  /*  <!-- Footer -->  */
+  footer .container .about {
+    width: calc(calc(100% - (20px * 2)) / 4);
+  }
+  footer .container .subscribe {
+    width: calc(calc(100% - (20px * 2)) / 2);
+  }
+  footer .container .get-in {
+    width: calc(calc(100% - (20px * 2)) / 4);
+  }
+}
+
+@media (min-width: 1400px) {
+}

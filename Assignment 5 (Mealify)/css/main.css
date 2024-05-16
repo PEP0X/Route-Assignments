@@ -1,0 +1,628 @@
+/* Less Than 36rem */
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.container {
+  max-width: 540px;
+}
+
+/* Variables */
+:root {
+  --color-first: #212529;
+  --color-second: #ce1212;
+  --font-first: "Amatic SC", sans-serif;
+  --font-second: "Inter", sans-serif;
+  --bg-color-first: #eeeeee;
+  --bg-color-second: #fff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+
+nav {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0px 0px 14px 0px #0000001b;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  padding: 0;
+  margin: 0;
+}
+
+nav .logo {
+  font-size: 20px;
+  font-family: var(--font-first);
+  padding: 25px;
+}
+nav .logo a {
+  color: var(--color-first);
+}
+nav .logo a::after {
+  content: ".";
+  color: var(--color-second);
+}
+
+nav .nav-menu {
+  display: none;
+}
+
+nav .icons {
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+}
+nav .icons i {
+  font-size: 1.5625rem;
+  cursor: pointer;
+}
+
+/* Hero-Section */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color-first);
+}
+header .container {
+  max-width: 540px;
+  --gap: 50px;
+  padding: 40px 15px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: var(--gap);
+  padding-top: 112px;
+  text-align: center;
+}
+/* 
+ Shake effect 
+ Source :  https://www.geeksforgeeks.org/how-to-shake-an-image-using-css-keyframe/ 
+ Shadow Effect 
+ Source : https://www.w3docs.com/snippets/css/how-to-create-a-drop-shadow-for-png-image.html
+ */
+header .container img {
+  width: 100%;
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
+}
+header .container img:hover {
+  animation: Shake 0.5s linear infinite;
+}
+/*Using keyframes for shaking an image*/
+@keyframes Shake {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  25% {
+    transform: rotate(-6deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-6deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+header .container .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+header .container .content h2 {
+  font-family: var(--font-first);
+  font-size: 65px;
+  padding: 0;
+  margin: 0;
+}
+header .container .content p {
+  color: #4f4f5a;
+  line-height: 1.6;
+}
+
+header .container .content .btns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.btn {
+  background-color: var(--color-second);
+  color: var(--bg-color-second);
+  padding: 10px 25px;
+  border: none;
+  border-radius: 0px 20px 20px;
+  font-size: 15px;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #e61414;
+}
+header .container .content .btns a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.5s;
+}
+header .container .content .btns a:hover {
+  color: var(--color-second);
+}
+header .container .content .btns .ico {
+  background-color: var(--bg-color-second);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .container .content .btns .ico::after {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: solid 8px;
+  border-radius: 50%;
+  border-color: #ce1212 transparent transparent #ce1212;
+  rotate: -45deg;
+}
+
+/* Chefs-Section */
+
+#chefs {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color-second);
+  width: 100%;
+  padding-block: 40px;
+}
+#chefs .container {
+  padding: 40px 15px;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  gap: 30px;
+}
+#chefs .title h2 {
+  color: #666666;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#chefs .title > * {
+  margin: 0;
+}
+#chefs .title p,
+#chefs .title span {
+  font-family: var(--font-first);
+  font-size: 50px;
+}
+#chefs .title span {
+  color: var(--color-second);
+}
+#chefs .cards .card-content h3 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+#chefs .cards .card-content span {
+  font-size: 14px;
+  color: #7f7f90;
+  margin-block: 5px 10px;
+}
+
+#chefs .cards .card-content p {
+  font-style: italic;
+  color: #7f7f90;
+  font-weight: 100;
+  padding: 0px 20px;
+}
+
+#chefs .cards {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 50px;
+}
+#chefs .cards .card {
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 400ms;
+}
+
+#chefs .cards .card img {
+  width: 100%;
+}
+
+#chefs .card .icon-cheff {
+  position: absolute;
+  top: 40px;
+  right: -110%;
+  background-color: #ffffff4d;
+  padding: 0.625rem;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+#chefs .card .icon-cheff i {
+  color: #37373f66;
+  padding: 8px 8px;
+}
+
+#chefs .card .icon-cheff i:hover {
+  color: #47454c;
+}
+
+#chefs .cards .card:hover {
+  scale: 1.05;
+}
+#chefs .cards .card:hover .icon-cheff {
+  transition: all 0.5s 0.3s;
+  right: 5px;
+}
+
+#chefs .cards .card-img {
+  position: relative;
+}
+
+#chefs .cards .card-img::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/team-shape.svg");
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+}
+/* Gallery Section */
+#gallery {
+  background-color: var(--bg-color-first);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-block: 40px;
+}
+#gallery .container {
+  padding: 40px 15px;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  gap: 30px;
+}
+#gallery .title h2 {
+  color: #666666;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#gallery .title p,
+#gallery .title h2 {
+  margin: 0;
+}
+#gallery .title p,
+#gallery .title span {
+  font-family: var(--font-first);
+  font-size: 50px;
+}
+#gallery .title span {
+  color: var(--color-second);
+}
+#gallery .gallery-images {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+#gallery .meal {
+  position: relative;
+  border: 4px solid #fff;
+  overflow: hidden;
+}
+#gallery .meal img {
+  display: block;
+  width: 100%;
+}
+#gallery .meal .layer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 110%;
+  gap: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  transition: all 0.5s;
+}
+#gallery .meal .layer .content > * {
+  margin: 0;
+  padding: 0;
+}
+#gallery .meal:hover .layer {
+  top: 0;
+}
+#gallery .meal .image {
+  transition: all 0.5s;
+}
+#gallery .meal:hover .image {
+  transform: scale(1.1);
+}
+
+/* <!-- Contact Section --> */
+#contact {
+  background-color: var(--bg-color-second);
+  display: flow-root;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-block: 40px;
+}
+#contact .container {
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#contact .container .title {
+  text-align: center;
+}
+#contact .title h2 {
+  color: #666666;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#contact .title > * {
+  margin: 0;
+}
+#contact .title p,
+#contact .title span {
+  font-family: var(--font-first);
+  font-size: 50px;
+}
+#contact .title span {
+  color: var(--color-second);
+}
+#contact .info {
+  margin-block: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+}
+#contact .info > * {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background-color: hsl(0, 0%, calc(100% - 4%));
+}
+.add-cont > *,
+.email-content > *,
+.phone-content > *,
+.opening-content > * {
+  margin: 0;
+  padding: 0;
+}
+#contact .info .icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-second);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .info > div h3 {
+  color: #7d7d7d;
+  font-size: 20px;
+  font-weight: 700;
+}
+#contact form {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  box-shadow: 0 0 30px #00000014;
+  gap: 15px;
+}
+#contact form > *,
+#contact form .input-group > * {
+  width: 100%;
+}
+#contact form .input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+#contact form input,
+textarea {
+  padding: 15px 15px;
+  line-height: 1.5;
+  border: 2px solid #e7e2e2;
+  color: #212529;
+  transition: border-color 0.5s;
+}
+/* to Fix Border Color use (!important) */
+#contact form input:focus,
+textarea:focus {
+  outline: none !important;
+  border-color: var(--color-second);
+}
+#contact form textarea {
+  min-height: 150px;
+  max-height: 300px;
+  resize: vertical;
+}
+#contact form .btn-main {
+  width: fit-content;
+  padding: 12px 40px;
+}
+
+/* <!-- Footer --> */
+footer {
+  background-image: linear-gradient(#0009, #0009), url(../img/background.jpg);
+  background-size: contain;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 15px;
+}
+footer .container .about {
+  width: 100%;
+}
+footer .container .about .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .container .about .logo img {
+  width: 40px;
+  height: 40px;
+}
+footer .container .about .logo h2 {
+  font-size: 30px;
+  margin: 0;
+}
+footer .container .about .logo h2::after {
+  content: ".";
+  color: var(--color-second);
+}
+
+footer .container .about h3 {
+  text-align: center;
+  border-bottom: 2px solid #7d7d7d;
+  padding: 10px;
+  font-family: var(--font-second);
+}
+footer .container .about .social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+}
+footer .container .subscribe h3 {
+  margin: 0;
+}
+footer .container .subscribe p {
+  margin-block: 10px;
+}
+
+footer .container .subscribe .subscription-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+footer .container .subscribe .subscription-group input {
+  flex-grow: 1;
+  padding: 10px;
+  width: 100%;
+}
+
+footer .container .subscribe .subscription-group .btn {
+  border-radius: 0;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+footer .container .subscribe .quick-links ul {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+footer .container .subscribe .quick-links ul li {
+  /* Total Width - Gap bettween columns / # of columns */
+  width: calc(calc(100% - 20px) / 2);
+  padding: 5px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+footer .container .subscribe .quick-links ul li::before {
+  content: "\f105";
+  font: normal 900 1em/1 "Font Awesome 6 Free";
+  margin-right: 5px;
+}
+
+footer .container .subscribe .quick-links ul li:hover {
+  transform: translateX(10px);
+  background-color: #222;
+}
+
+footer .container .get-in h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: var(--font-second);
+}
+
+footer .container .get-in ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+footer .container .get-in ul li i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-second);
+  font-size: 22px;
+  cursor: pointer;
+}

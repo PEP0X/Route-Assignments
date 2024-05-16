@@ -1,0 +1,78 @@
+@media (max-width: 750px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
+        grid-template-areas: 
+            "learn-more"        
+            "iphone"
+            "keyboard"
+            "game"
+            "imac"
+            "connect"
+            "much"
+            "icloud"
+            "popular"
+            "vision";
+    }
+    .learn-more{
+        padding-block: 40px;
+    }
+    .iphone{
+        flex-direction: column;
+        padding-top: 30px;
+        
+    }
+    .iphone .text{
+        width: 90%;
+    }
+    .keyboard { 
+        padding-block: 30px;
+    }
+    .game {
+        padding-block: 50px;
+    }
+    .imac{
+        flex-direction: column;
+    }
+    .imac .left{
+        width: 100%;
+        max-width: none;
+    }
+    .imac .left .image{
+        left: -440px;
+        margin-bottom: 20px;
+    }
+    .imac .left img{
+        width: 800px;
+    }
+    .imac .right{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .much .head{
+        margin-block: 30px;
+    }
+    .popular{
+        padding-block: 35px;
+    }
+    .popular h3{
+        max-width: 300px;
+        text-align: center;
+    }
+    .vision {
+        flex-direction: column;
+    }
+    .vision .image{
+        width: 30%;
+    }
+    .vision .image img{
+        position: relative;
+        width: 275px;
+        top: 1px;
+        left: -115%;
+    }
+    .vision h3{
+        width: auto;
+        margin-top:0;
+    }
+}

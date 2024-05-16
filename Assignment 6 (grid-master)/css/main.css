@@ -1,0 +1,452 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100%;
+}
+
+@font-face {
+    font-family: "Arvo";
+    src: url("../fonts/Arvo-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Arvo";
+    src: url("../fonts/Arvo-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Arvo";
+    src: url("../fonts/Arvo-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Arvo";
+    src: url("../fonts/Arvo-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf");
+    font-style: italic;
+}
+
+.container>*{
+    overflow: hidden;
+    
+}
+.container {
+    align-content: start;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 0.5fr;
+    gap: 0 0;
+
+    grid-template-areas:
+    "iphone iphone learn-more learn-more"
+    "keyboard imac imac icloud"
+    "game much much icloud"
+    "connect popular vision vision";
+}
+.head{
+    font-family: "Montserrat", serif;
+    font-size: .75rem;
+    color: #9fa3a7;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.text-grey{
+    color: #9fa3a7;
+    font-family: "Montserrat", serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.iphone {
+    grid-area: iphone;
+    display: flex;
+    padding-inline: 4%;
+    justify-content: space-around;
+    align-items: center;
+    /* overflow: hidden; */
+}
+.iphone .text{
+    width: 30%;
+}
+
+.iphone .text h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+} 
+.iphone .image{
+    margin-top: 90px;
+    width: 270px;
+}
+.iphone .image img{
+    display: block;
+    width: 100%;
+}
+
+/* Learn More */
+
+.learn-more { 
+    grid-area: learn-more; 
+    background-color: #f7f8f9;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.learn-more h1{
+  font-family: Arvo, sans-serif;
+  font-size: 45px;
+  line-height: 60px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.learn-more a{
+    color:#27b9c2;
+    font-size: 15px;
+}
+
+/* Keyboard */
+
+.keyboard { 
+    grid-area: keyboard; 
+    background-color: #f05638;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.keyboard img{
+    max-width: 100%;
+    width: 320px;
+}
+.keyboard h3{
+    color: #fff;
+    max-width: 230px;
+    font-family: "Arvo", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+.keyboard a{
+    color: #ffc60b;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Imac */
+
+.imac {
+    grid-area: imac; 
+    display: flex;
+    overflow: hidden;
+    padding-top: 70px;
+    padding-inline: 4%;
+    justify-content: space-around;
+}
+.imac .left{
+    display: flex;
+    width: 50%;
+    max-width: 180px;
+    flex-direction: column;
+
+}
+.imac .left h3{
+    margin-top: 10px;
+    margin-bottom: auto;
+    font-family: Arvo, sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+.imac .left .image{
+    position: relative;
+    left: -176%;
+    width: 250%;
+    max-width: none;
+    margin-top: 20px;
+}
+
+.imac .left img{
+    display: block;
+    width: 480px;
+}
+.imac .right{
+    width: 40%;
+}
+.imac .right a{
+    color:#27b9c2;
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Icloud */
+
+.icloud { 
+    grid-area: icloud;
+    background-color: #8f76bc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 30px 5% 70px;
+}
+.icloud .circle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 365px;
+    height: 365px;
+    border-radius: 50%;
+    background-color: #8166b0;
+}
+.icloud .circle .pop{
+    color: #fff;
+    padding: 2px 13px 1px 30px;
+    border-radius: 60px;
+    background-color: hsla(0, 0%, 100%, .08);
+    background-image: url("https://uploads-ssl.webflow.com/5bc242f45a5ed923b1704210/5bc2f42d5a5ed9663e707e7d_Shape.png");
+    background-position: 11px 50%;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    font-size: 10px;
+    line-height: 23px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.icloud .circle img{
+    width: 65%;
+}
+.icloud .circle span{
+    font-family: "Montserrat", serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.4px; 
+}
+.icloud h2{
+    font-family: "Arvo" , serif;
+    color: #fff;
+    font-size: 33px;
+    margin-block: 20px 10px;
+}
+.icloud p{
+    margin: 0;
+    color: #fff;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 25px;
+}
+.icloud a{
+    margin-top:26px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background-color: #ffc80a;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-decoration: none;
+}
+
+/* Game */
+
+.game { 
+    grid-area: game; 
+    background-color: #f7f8f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game .image{
+    width: 70%;
+    position: relative;
+    left: -7%;
+}
+
+.game .image img{
+    width: 100%;
+}
+.game h3{
+    font-family: "Arvo";
+    font-weight: 400;
+    font-size: 22px;
+}
+.game a{
+    color: #27b9c2;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    font-size: 12px;
+}
+/* Much */
+.much { 
+    grid-area: much; 
+    background-color: #93b6b7;
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-image: url(/image/asset\ 9.png);
+    background-position: 50% 100%;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.much .best{
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    color: #fff;
+    padding-inline:10px;
+    border-radius: 5px;
+    background-color: #fa684f;
+    font-size: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.much .head{
+  color: #fff;
+  font-family: Arvo, sans-serif;
+  font-size: 22px;
+  line-height: 32px;
+  margin: 0;
+}
+.much .image{
+    position: relative;
+    left: -7%;
+    width: 90%;
+}
+.much .image img{
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.connect { 
+    grid-area: connect; 
+    background-color: #38d5f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.connect .circle{
+    background-color: #35cfed;
+    width: 250px;
+    height: 250px;
+    padding-inline: 32px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.connect .circle img{
+    width: 50px;
+}
+.connect .circle h3{
+    color: #fff;
+    max-width: 230px;
+    font-family: "Arvo", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.popular { 
+    grid-area: popular; 
+    background-color: #f7f8f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular .pop{
+    font-size: 8px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 2px 8px;
+    border-radius: 10%;
+    background-color: #7bc424;
+    text-transform: capitalize;
+    color: #fff;
+
+}
+.popular h3{
+    margin: 6px;
+    font-family: "Arvo", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.vision { 
+    grid-area: vision; 
+    background-color: #2c2c2c;
+    display: flex;
+    padding-inline: 5%;
+    justify-content: center;
+    align-items: center;
+}
+.vision .image{
+    position: relative;
+    width: 30%;
+}
+.vision .image img{
+    position: absolute;
+    top: -121px;
+    left: -113px;
+    width: 101%;
+}
+.vision h3{
+    color: #fff;
+    width: 34%;
+    font-family: "Arvo", sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 400;
+}

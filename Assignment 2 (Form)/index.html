@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Data</title>
+    <style>
+        button{
+            background-color: #0666be;
+            color: #fff;
+            padding: 7px 15px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #004180;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset style="background-color: #a32b2d;">
+            <legend style="background-color: #4f83ad; margin-bottom: 15px">Personal Data</legend>
+                <fieldset style="background-color: #fcbf00;  margin-bottom: 60px">
+                    <legend style="background-color: #6496eb; padding: 40px 2px; margin-bottom: 50px">Your Name</legend>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="fName" >first name</label>
+                                </td>
+                                <td>
+                                    :
+                                    <input type="text" name="firstName" id="fName" placeholder="Ex. Abanoub">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="sName">second name</label>
+                                </td>
+                                <td>
+                                    :
+                                    <input type="text" name="secondName" id="sName" placeholder="Ex. Nashaat">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            <table style="margin-bottom: 90px">
+                <tr>
+                    <td>
+                        <label for="uPhone">your phone</label>
+                    </td>
+                    <td>
+                        : <input type="tel" name="uPhone" id="uPhone" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="uEmail">
+                            Email
+                        </label>
+                    </td>
+                    <td>
+                        : <input type="email" name="uEmail" id="uEmail" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="uPass">
+                            password
+                        </label>
+                    </td>
+                    <td>
+                        : <input type="password" name="uPass" id="uPass">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="rePass">re-password</label>
+                    </td>
+                    <td>
+                        : <input type="password" name="rePassword" id="rePass">
+                    </td>
+                </tr>
+            </table>
+            <table style="margin-bottom: 50px">
+                <tr>
+                    <td>
+                        <input type="radio" name="uGender" id="male" checked>
+                    </td>
+                    <td>
+                        <label for="male">Male</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="uGender" id="female">
+                    </td>
+                    <td>
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="margin-bottom: 50px">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="status" id="student">
+                    </td>
+                    <td>
+                        <label for="student">
+                            Student
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="status" id="grad">
+                    </td>
+                    <td>
+                        <label for="grad">
+                            Graduated
+                        </label>
+                    </td>
+                </tr>
+            </table>
+
+            <select name="uUniversity" id="uUniversity" style="margin-bottom: 30px;">
+                <option value selected hidden disabled>Choose Your University</option>
+                <optgroup label="State-funded">
+                    <option value="ASU">Ain Shams University</option>
+                    <option value="ALEXU">Alexandria University</option>
+                    <option value="CU">Cairo University</option>
+                    <option value="MANS">Mansoura University</option>
+                </optgroup>
+
+                <optgroup label="National universities">
+                    <option value="GU">Galala University</option>
+                    <option value="AIU">AlAlamein International University</option>
+                    <option value="NU">Nile University</option>
+                </optgroup>
+
+                <optgroup label="Private universities">
+                    <option value="GIU">German International University</option>
+                    <option value="AUC">The American University in Cairo</option>
+                    <option value="BUE">British University in Egypt</option>
+                </optgroup>
+            </select>
+
+            <button type="submit">
+                Submit
+            </button>
+        </fieldset>
+    </form>
+</body>
+</html>
